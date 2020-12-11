@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct RakuKoboApp: App {
+    @StateObject private var viewModel = NobelLaureatesViewModel()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NobelLaureatesView()
+                .environmentObject(viewModel)
         }
     }
 }
