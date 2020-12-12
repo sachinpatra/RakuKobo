@@ -7,7 +7,6 @@
 
 import SwiftUI
 import MapKit
-import LocationPicker
 
 struct LocationPicker: UIViewControllerRepresentable {
     @Environment(\.presentationMode) var presentationMode

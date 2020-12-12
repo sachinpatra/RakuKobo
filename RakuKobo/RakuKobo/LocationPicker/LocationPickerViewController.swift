@@ -392,11 +392,11 @@ extension LocationPickerViewController: MKMapViewDelegate {
 	
 	public func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
 		completion?(location)
-		if let navigation = navigationController, navigation.viewControllers.count > 1 {
-			navigation.popViewController(animated: true)
-		} else {
-			presentingViewController?.dismiss(animated: true, completion: nil)
-		}
+//		if let navigation = navigationController, navigation.viewControllers.count > 1 {
+//			navigation.popViewController(animated: true)
+//		} else {
+//			presentingViewController?.dismiss(animated: true, completion: nil)
+//		}
 	}
 	
 	public func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {

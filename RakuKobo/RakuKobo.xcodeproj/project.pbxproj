@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3151BD8FD44AF96FF5EBDBF9 /* Pods_RakuKobo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29CE551E5EC7FA0898F654BB /* Pods_RakuKobo.framework */; };
 		7C199A3E25839F060098694F /* RakuKoboApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C199A3D25839F060098694F /* RakuKoboApp.swift */; };
 		7C199A4025839F060098694F /* NobelLaureatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C199A3F25839F060098694F /* NobelLaureatesView.swift */; };
 		7C199A4225839F090098694F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C199A4125839F090098694F /* Assets.xcassets */; };
@@ -18,12 +17,15 @@
 		7C199AA02584022D0098694F /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C199A9F2584022C0098694F /* Common.swift */; };
 		7C199AA825840A6A0098694F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C199AA725840A6A0098694F /* Extensions.swift */; };
 		7C199AAF258422EA0098694F /* LocationPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C199AAE258422E90098694F /* LocationPicker.swift */; };
+		7C89671025849B6800CF76FE /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C89670F25849B6800CF76FE /* FilterView.swift */; };
+		7C89672F2584A34F00CF76FE /* LocationPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C89672B2584A34E00CF76FE /* LocationPickerViewController.swift */; };
+		7C8967302584A34F00CF76FE /* LocationSearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C89672C2584A34E00CF76FE /* LocationSearchResultsViewController.swift */; };
+		7C8967312584A34F00CF76FE /* SearchHistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C89672D2584A34F00CF76FE /* SearchHistoryManager.swift */; };
+		7C8967322584A34F00CF76FE /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C89672E2584A34F00CF76FE /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		29CE551E5EC7FA0898F654BB /* Pods_RakuKobo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RakuKobo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E1BEC7CFF3F0A1FC96D47F2 /* Pods-RakuKobo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RakuKobo.release.xcconfig"; path = "Target Support Files/Pods-RakuKobo/Pods-RakuKobo.release.xcconfig"; sourceTree = "<group>"; };
-		6E870C86F4FECA050B421599 /* Pods-RakuKobo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RakuKobo.debug.xcconfig"; path = "Target Support Files/Pods-RakuKobo/Pods-RakuKobo.debug.xcconfig"; sourceTree = "<group>"; };
 		7C199A3A25839F060098694F /* RakuKobo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RakuKobo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C199A3D25839F060098694F /* RakuKoboApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RakuKoboApp.swift; sourceTree = "<group>"; };
 		7C199A3F25839F060098694F /* NobelLaureatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NobelLaureatesView.swift; sourceTree = "<group>"; };
@@ -36,6 +38,11 @@
 		7C199A9F2584022C0098694F /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		7C199AA725840A6A0098694F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7C199AAE258422E90098694F /* LocationPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPicker.swift; sourceTree = "<group>"; };
+		7C89670F25849B6800CF76FE /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		7C89672B2584A34E00CF76FE /* LocationPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPickerViewController.swift; sourceTree = "<group>"; };
+		7C89672C2584A34E00CF76FE /* LocationSearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchResultsViewController.swift; sourceTree = "<group>"; };
+		7C89672D2584A34F00CF76FE /* SearchHistoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchHistoryManager.swift; sourceTree = "<group>"; };
+		7C89672E2584A34F00CF76FE /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +50,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3151BD8FD44AF96FF5EBDBF9 /* Pods_RakuKobo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,7 +61,6 @@
 			children = (
 				7C199A3C25839F060098694F /* RakuKobo */,
 				7C199A3B25839F060098694F /* Products */,
-				D11D4C756307699B42A5F3EF /* Pods */,
 				91B9520676D4A2F2D31BDDCF /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +79,7 @@
 				7C199A3D25839F060098694F /* RakuKoboApp.swift */,
 				7C199A3F25839F060098694F /* NobelLaureatesView.swift */,
 				7C199A922583B9750098694F /* NobelLaureatesViewModel.swift */,
+				7C89670F25849B6800CF76FE /* FilterView.swift */,
 				7C199A962583CE800098694F /* Nobel.swift */,
 				7C199A4F2583A2AB0098694F /* Resources */,
 				7C199A4625839F090098694F /* Info.plist */,
@@ -96,6 +102,10 @@
 		7C199A4F2583A2AB0098694F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7C89672E2584A34F00CF76FE /* Location.swift */,
+				7C89672B2584A34E00CF76FE /* LocationPickerViewController.swift */,
+				7C89672C2584A34E00CF76FE /* LocationSearchResultsViewController.swift */,
+				7C89672D2584A34F00CF76FE /* SearchHistoryManager.swift */,
 				7C199A522583A4BA0098694F /* nobel-prize-laureates.json */,
 				7C199A4125839F090098694F /* Assets.xcassets */,
 			);
@@ -110,16 +120,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D11D4C756307699B42A5F3EF /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6E870C86F4FECA050B421599 /* Pods-RakuKobo.debug.xcconfig */,
-				5E1BEC7CFF3F0A1FC96D47F2 /* Pods-RakuKobo.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -127,11 +127,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C199A4925839F0A0098694F /* Build configuration list for PBXNativeTarget "RakuKobo" */;
 			buildPhases = (
-				B4E5FAF96D887722B92130F9 /* [CP] Check Pods Manifest.lock */,
 				7C199A3625839F060098694F /* Sources */,
 				7C199A3725839F060098694F /* Frameworks */,
 				7C199A3825839F060098694F /* Resources */,
-				56F499A1ECF49AED0101159F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -187,59 +185,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		56F499A1ECF49AED0101159F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RakuKobo/Pods-RakuKobo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RakuKobo/Pods-RakuKobo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RakuKobo/Pods-RakuKobo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B4E5FAF96D887722B92130F9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RakuKobo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		7C199A3625839F060098694F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C8967302584A34F00CF76FE /* LocationSearchResultsViewController.swift in Sources */,
 				7C199A972583CE800098694F /* Nobel.swift in Sources */,
+				7C89672F2584A34F00CF76FE /* LocationPickerViewController.swift in Sources */,
 				7C199A4025839F060098694F /* NobelLaureatesView.swift in Sources */,
 				7C199A932583B9760098694F /* NobelLaureatesViewModel.swift in Sources */,
 				7C199AA02584022D0098694F /* Common.swift in Sources */,
+				7C89671025849B6800CF76FE /* FilterView.swift in Sources */,
 				7C199A3E25839F060098694F /* RakuKoboApp.swift in Sources */,
 				7C199AAF258422EA0098694F /* LocationPicker.swift in Sources */,
+				7C8967312584A34F00CF76FE /* SearchHistoryManager.swift in Sources */,
+				7C8967322584A34F00CF76FE /* Location.swift in Sources */,
 				7C199AA825840A6A0098694F /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,7 +326,6 @@
 		};
 		7C199A4A25839F0A0098694F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6E870C86F4FECA050B421599 /* Pods-RakuKobo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -388,7 +348,6 @@
 		};
 		7C199A4B25839F0A0098694F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E1BEC7CFF3F0A1FC96D47F2 /* Pods-RakuKobo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
