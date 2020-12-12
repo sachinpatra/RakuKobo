@@ -48,9 +48,8 @@ struct FilterView: View {
                 
                 print((value?.coordinate.latitude))
                 print(value?.coordinate.longitude)
-                print( abs((value?.coordinate.latitude)!))
-                print( abs((value?.coordinate.longitude)!))
-
+                print( value!.coordinate.latitude.cutOffDecimalsAfter(1))
+                print( value!.coordinate.longitude.cutOffDecimalsAfter(1))
             }
             .navigationBarItems(leading: Button(action: {
                 presentationMode.wrappedValue.dismiss()
@@ -60,7 +59,10 @@ struct FilterView: View {
                 presentationMode.wrappedValue.dismiss()
             }, label: {
                 Text("Apply")
-            }))
+            }).disabled(viewModel.selectedYear.isEmpty
+                            && viewModel.lat == nil
+                            && viewModel.lng == nil)
+            )
         }
     }
 }

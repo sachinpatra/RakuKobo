@@ -34,11 +34,21 @@ extension UIApplication {
 }
 
 extension Double {
-  func roundTo(places:Int) -> Double {
-    guard self != 0.0 else {
-        return 0
+    static func equal(_ lhs: Double, _ rhs: Double, precise value: Int? = nil) -> Bool {
+        guard let value = value else {
+            return lhs == rhs
+        }
+        
+        return lhs.cutOffDecimalsAfter(value) == rhs.cutOffDecimalsAfter(value)
     }
-    let divisor = pow(10.0, Double(places) - ceil(log10(fabs(self))))
-    return (self * divisor).rounded() / divisor
-  }
+    
+    func precised(_ value: Int = 1) -> Double {
+        let offset = pow(10, Double(value))
+        return (self * offset).rounded() / offset
+    }
+    
+    func cutOffDecimalsAfter(_ places:Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return (self*divisor).rounded(.towardZero) / divisor
+    }
 }
