@@ -52,3 +52,18 @@ extension Double {
         return (self*divisor).rounded(.towardZero) / divisor
     }
 }
+
+extension Color {
+    
+    public static var sectionHeaderBackground: Color {
+        Color("SectionHeaderBackground")
+    }
+    
+    public static var sectionHeaderText: Color {
+        Color("SectionHeaderText")
+    }
+    
+    public static var invisible: Color {
+        Color("Invisible")
+    }
+}

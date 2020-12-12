@@ -20,67 +20,78 @@ struct NobelLaureatesView: View {
                         .font(.headline)
                         .foregroundColor(.red)
                 } else {
-                    List {
-                        ForEach(viewModel.filteredList, id: \.id) { nobel in
-                            Section {
-                                HStack {
-                                    Text("Name")
-                                    Spacer()
-                                    Text(nobel.name)
+                    Form {
+                        ForEach(Array(viewModel.filteredList.keys), id: \.self) { key in
+                            DisclosureGroup {
+                                ForEach(viewModel.filteredList[key] ?? [], id: \.id) { nobel in
+                                    VStack {
+                                        HStack {
+                                            Text("Name:")
+                                            Spacer()
+                                            Text(nobel.name)
+                                        }
+                                        HStack {
+                                            Text("Firstname:")
+                                            Spacer()
+                                            Text(nobel.firstname)
+                                        }
+                                        HStack {
+                                            Text("Surname:")
+                                            Spacer()
+                                            Text(nobel.surname)
+                                        }
+                                        HStack {
+                                            Text("Gender:")
+                                            Spacer()
+                                            Text(nobel.gender)
+                                        }
+                                        Group {
+                                        HStack {
+                                            Text("City:")
+                                            Spacer()
+                                            Text(nobel.city)
+                                        }
+                                        HStack {
+                                            Text("Year:")
+                                            Spacer()
+                                            Text(nobel.year)
+                                        }
+
+                                        HStack {
+                                            Text("Born:")
+                                            Spacer()
+                                            Text(nobel.born)
+                                        }
+                                        HStack {
+                                            Text("Died:")
+                                            Spacer()
+                                            Text(nobel.died)
+                                        }
+
+                                        HStack {
+                                            Text("Latitude:")
+                                            Spacer()
+                                            Text("\(nobel.location.lat)")
+                                        }
+                                        HStack {
+                                            Text("Longitude:")
+                                            Spacer()
+                                            Text("\(nobel.location.lng)")
+                                        }
+                                        }
+                                    }
+                                    .shadow(radius: 1)
                                 }
-                                HStack {
-                                    Text("Firstname")
-                                    Spacer()
-                                    Text(nobel.firstname)
-                                }
-                                HStack {
-                                    Text("Surname")
-                                    Spacer()
-                                    Text(nobel.surname)
-                                }
-                                HStack {
-                                    Text("Gender")
-                                    Spacer()
-                                    Text(nobel.gender)
-                                }
-                                HStack {
-                                    Text("City")
-                                    Spacer()
-                                    Text(nobel.city)
-                                }
-                                HStack {
-                                    Text("Year")
-                                    Spacer()
-                                    Text(nobel.year)
-                                }
-                                
-                                HStack {
-                                    Text("Born")
-                                    Spacer()
-                                    Text(nobel.born)
-                                }
-                                HStack {
-                                    Text("Died")
-                                    Spacer()
-                                    Text(nobel.died)
-                                }
-                                
-                                HStack {
-                                    Text("Latitude")
-                                    Spacer()
-                                    Text("\(nobel.location.lat)")
-                                }
-                                HStack {
-                                    Text("Longitude")
-                                    Spacer()
-                                    Text("\(nobel.location.lng)")
-                                }
+                            }
+                            label: {
+                                Text(key)
+                                    .foregroundColor(.sectionHeaderBackground)
+                                    .font(.headline)
                             }
                         }
                     }
                 }
             }
-            .listStyle(GroupedListStyle())
             .navigationBarTitle("Nobel Laureates")
             .navigationBarItems(leading: Button(action: {
                 viewModel.selectedYear = ""
