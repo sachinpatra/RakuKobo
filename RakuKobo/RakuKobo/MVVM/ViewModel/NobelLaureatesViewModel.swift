@@ -10,7 +10,7 @@ import Combine
 import CoreLocation
 
 class NobelLaureatesViewModel: ObservableObject {
-    private var nobels = Set<Nobel>()
+    private var nobels = Set<Nobel>()//Used Set to optimize search operation better than quadtratic (n^2)
     private var disposeBag = Set<AnyCancellable>()
 
     @Published private (set) var filteredList = [String: [Nobel]]()
