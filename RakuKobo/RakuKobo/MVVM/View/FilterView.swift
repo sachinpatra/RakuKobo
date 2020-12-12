@@ -57,7 +57,7 @@ struct FilterView: View {
                 presentationMode.wrappedValue.dismiss()
             }, label: {
                 Text("Apply")
-            }).disabled(viewModel.selectedYear.isEmpty && viewModel.coordi == nil))
+            }).disabled(viewModel.selectedYear.isEmpty || viewModel.coordi == nil))
         }
     }
 }

@@ -18,10 +18,10 @@
 		7C199AA825840A6A0098694F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C199AA725840A6A0098694F /* Extensions.swift */; };
 		7C199AAF258422EA0098694F /* LocationPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C199AAE258422E90098694F /* LocationPicker.swift */; };
 		7C89671025849B6800CF76FE /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C89670F25849B6800CF76FE /* FilterView.swift */; };
-		7C89672F2584A34F00CF76FE /* LocationPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C89672B2584A34E00CF76FE /* LocationPickerViewController.swift */; };
-		7C8967302584A34F00CF76FE /* LocationSearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C89672C2584A34E00CF76FE /* LocationSearchResultsViewController.swift */; };
-		7C8967312584A34F00CF76FE /* SearchHistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C89672D2584A34F00CF76FE /* SearchHistoryManager.swift */; };
-		7C8967322584A34F00CF76FE /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C89672E2584A34F00CF76FE /* Location.swift */; };
+		7C8967382585539B00CF76FE /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8967372585539B00CF76FE /* Location.swift */; };
+		7C89673B258553BC00CF76FE /* LocationPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C89673A258553BC00CF76FE /* LocationPickerViewController.swift */; };
+		7C89673E258553DD00CF76FE /* LocationSearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C89673D258553DD00CF76FE /* LocationSearchResultsViewController.swift */; };
+		7C8967412585540000CF76FE /* SearchHistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C8967402585540000CF76FE /* SearchHistoryManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,10 +39,10 @@
 		7C199AA725840A6A0098694F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7C199AAE258422E90098694F /* LocationPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPicker.swift; sourceTree = "<group>"; };
 		7C89670F25849B6800CF76FE /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
-		7C89672B2584A34E00CF76FE /* LocationPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPickerViewController.swift; sourceTree = "<group>"; };
-		7C89672C2584A34E00CF76FE /* LocationSearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchResultsViewController.swift; sourceTree = "<group>"; };
-		7C89672D2584A34F00CF76FE /* SearchHistoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchHistoryManager.swift; sourceTree = "<group>"; };
-		7C89672E2584A34F00CF76FE /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		7C8967372585539B00CF76FE /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		7C89673A258553BC00CF76FE /* LocationPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPickerViewController.swift; sourceTree = "<group>"; };
+		7C89673D258553DD00CF76FE /* LocationSearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchResultsViewController.swift; sourceTree = "<group>"; };
+		7C8967402585540000CF76FE /* SearchHistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,16 +77,11 @@
 			isa = PBXGroup;
 			children = (
 				7C199A3D25839F060098694F /* RakuKoboApp.swift */,
-				7C199A3F25839F060098694F /* NobelLaureatesView.swift */,
-				7C199A922583B9750098694F /* NobelLaureatesViewModel.swift */,
-				7C89670F25849B6800CF76FE /* FilterView.swift */,
-				7C199A962583CE800098694F /* Nobel.swift */,
+				7C8967442585564A00CF76FE /* MVVM */,
 				7C199A4F2583A2AB0098694F /* Resources */,
 				7C199A4625839F090098694F /* Info.plist */,
 				7C199A4325839F090098694F /* Preview Content */,
-				7C199A9F2584022C0098694F /* Common.swift */,
-				7C199AA725840A6A0098694F /* Extensions.swift */,
-				7C199AAE258422E90098694F /* LocationPicker.swift */,
+				7C8967352585531000CF76FE /* Location */,
 			);
 			path = RakuKobo;
 			sourceTree = "<group>";
@@ -102,14 +97,59 @@
 		7C199A4F2583A2AB0098694F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7C89672E2584A34F00CF76FE /* Location.swift */,
-				7C89672B2584A34E00CF76FE /* LocationPickerViewController.swift */,
-				7C89672C2584A34E00CF76FE /* LocationSearchResultsViewController.swift */,
-				7C89672D2584A34F00CF76FE /* SearchHistoryManager.swift */,
+				7C199AAE258422E90098694F /* LocationPicker.swift */,
+				7C199AA725840A6A0098694F /* Extensions.swift */,
+				7C199A9F2584022C0098694F /* Common.swift */,
 				7C199A522583A4BA0098694F /* nobel-prize-laureates.json */,
 				7C199A4125839F090098694F /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		7C8967352585531000CF76FE /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				7C8967372585539B00CF76FE /* Location.swift */,
+				7C89673A258553BC00CF76FE /* LocationPickerViewController.swift */,
+				7C89673D258553DD00CF76FE /* LocationSearchResultsViewController.swift */,
+				7C8967402585540000CF76FE /* SearchHistoryManager.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		7C8967442585564A00CF76FE /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				7C8967472585566A00CF76FE /* View */,
+				7C8967462585565A00CF76FE /* ViewModel */,
+				7C8967452585565200CF76FE /* Model */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		7C8967452585565200CF76FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7C199A962583CE800098694F /* Nobel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7C8967462585565A00CF76FE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7C199A922583B9750098694F /* NobelLaureatesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7C8967472585566A00CF76FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7C199A3F25839F060098694F /* NobelLaureatesView.swift */,
+				7C89670F25849B6800CF76FE /* FilterView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		91B9520676D4A2F2D31BDDCF /* Frameworks */ = {
@@ -190,17 +230,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C8967302584A34F00CF76FE /* LocationSearchResultsViewController.swift in Sources */,
 				7C199A972583CE800098694F /* Nobel.swift in Sources */,
-				7C89672F2584A34F00CF76FE /* LocationPickerViewController.swift in Sources */,
 				7C199A4025839F060098694F /* NobelLaureatesView.swift in Sources */,
 				7C199A932583B9760098694F /* NobelLaureatesViewModel.swift in Sources */,
+				7C89673B258553BC00CF76FE /* LocationPickerViewController.swift in Sources */,
+				7C8967412585540000CF76FE /* SearchHistoryManager.swift in Sources */,
 				7C199AA02584022D0098694F /* Common.swift in Sources */,
+				7C8967382585539B00CF76FE /* Location.swift in Sources */,
 				7C89671025849B6800CF76FE /* FilterView.swift in Sources */,
+				7C89673E258553DD00CF76FE /* LocationSearchResultsViewController.swift in Sources */,
 				7C199A3E25839F060098694F /* RakuKoboApp.swift in Sources */,
 				7C199AAF258422EA0098694F /* LocationPicker.swift in Sources */,
-				7C8967312584A34F00CF76FE /* SearchHistoryManager.swift in Sources */,
-				7C8967322584A34F00CF76FE /* Location.swift in Sources */,
 				7C199AA825840A6A0098694F /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
