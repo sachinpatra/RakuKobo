@@ -14,32 +14,80 @@ struct NobelLaureatesView: View {
 
     var body: some View {
         NavigationView {
-            ScrollViewReader { proxy in
                 List {
                     ForEach(viewModel.filteredList, id: \.id) { nobel in
                         Section {
-                            Text(nobel.surname)
-                            Text(nobel.firstname)
+                            HStack {
+                                Text("Name")
+                                Spacer()
+                                Text(nobel.name)
+                            }
+                            HStack {
+                                Text("Firstname")
+                                Spacer()
+                                Text(nobel.firstname)
+                            }
+                            HStack {
+                                Text("Surname")
+                                Spacer()
+                                Text(nobel.surname)
+                            }
+                            HStack {
+                                Text("Gender")
+                                Spacer()
+                                Text(nobel.gender)
+                            }
+                            HStack {
+                                Text("City")
+                                Spacer()
+                                Text(nobel.city)
+                            }
+                            HStack {
+                                Text("Year")
+                                Spacer()
+                                Text(nobel.year)
+                            }
+                            
+                            HStack {
+                                Text("Born")
+                                Spacer()
+                                Text(nobel.born)
+                            }
+                            HStack {
+                                Text("Died")
+                                Spacer()
+                                Text(nobel.died)
+                            }
+                            
+                            HStack {
+                                Text("Latitude")
+                                Spacer()
+                                Text("\(nobel.location.lat)")
+                            }
+                            HStack {
+                                Text("Longitude")
+                                Spacer()
+                                Text("\(nobel.location.lng)")
+                            }
                         }
                     }
                 }
                 .listStyle(GroupedListStyle())
                 .navigationBarTitle("Nobel Laureates")
-                .navigationBarItems(trailing: Button(action: {
-                    if let firstNobel = viewModel.filteredList.first {
-                        proxy.scrollTo(firstNobel.id)
-                    }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                        showFilterView.toggle()
-                    }
+                .navigationBarItems(leading: Button(action: {
+                    viewModel.selectedYear = ""
                 }, label: {
-                    Image(systemName: "magnifyingglass")
-                        .font(.title)
+                    Text("Clear filter")
+                }), trailing: Button(action: {
+                    showFilterView.toggle()
+                }, label: {
+                    Text("Filter")
                 }))
                 .sheet(isPresented: $showFilterView) {
-                    FilterView().environmentObject(viewModel)
+                    FilterView()
+                        .environmentObject(viewModel)
+                        .modifier(DisableModalDismiss(disabled: true))
                 }
-            }
         }
     }
 }

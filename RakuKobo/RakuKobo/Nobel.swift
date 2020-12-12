@@ -49,6 +49,6 @@ struct Nobel: Decodable, Identifiable {
 }
 
 struct NobLocation: Decodable {
-    var lat: Double
-    var lng: Double
+    var lat: Float
+    var lng: Float
 }

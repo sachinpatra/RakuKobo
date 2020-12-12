@@ -12,10 +12,9 @@ class NobelLaureatesViewModel: ObservableObject {
     var nobels = [Nobel]()
     @Published private (set) var filteredList = [Nobel]()
     @Published var selectedYear: String = ""
-    @Published var lat: Double?
-    @Published var lng: Double?
+    @Published var lat: Float?
+    @Published var lng: Float?
     
-    //var searchSubject = CurrentValueSubject<String, Never>("")
     private var disposeBag = Set<AnyCancellable>()
 
     init() {
@@ -24,20 +23,18 @@ class NobelLaureatesViewModel: ObservableObject {
         self.nobels = try! JSONDecoder().decode([Nobel].self, from: data)
         self.filteredList = self.nobels
         
-//        searchSubject
-//            .debounce(for: 0.2, scheduler: DispatchQueue.main)
-//            .removeDuplicates()
-//            .sink(receiveValue: { (value) in
-//                if value.isEmpty {
-//                    self.filteredList = self.nobels
-//                } else {
-//                    self.filteredList = self.nobels.filter{ $0.name.contains(value) }
-//                }
-//            })
-//            .store(in: &disposeBag)
-    }
-    
-    func applySearch() {
-        self.filteredList = self.nobels.filter{ $0.year.contains(selectedYear) }
+        Publishers.CombineLatest3($selectedYear, $lat, $lng)
+            .map{(year, latti, langi) -> [Nobel] in
+                guard !year.isEmpty else {
+                    return self.nobels
+                }
+                let result = self.nobels.filter{ $0.year == year }
+                return result
+            }
+            .sink(receiveValue: { (value) in
+                self.filteredList = value
+            })
+            .store(in: &disposeBag)
+       
     }
 }

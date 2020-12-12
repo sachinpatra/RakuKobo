@@ -45,8 +45,18 @@ struct FilterView: View {
             .onChange(of: selectedLocation) { (value) in
                 viewModel.lat = value?.coordinate.latitude
                 viewModel.lng = value?.coordinate.longitude
+                
+                print((value?.coordinate.latitude))
+                print(value?.coordinate.longitude)
+                print( abs((value?.coordinate.latitude)!))
+                print( abs((value?.coordinate.longitude)!))
+
             }
-            .navigationBarItems(trailing: Button(action: {
+            .navigationBarItems(leading: Button(action: {
+                presentationMode.wrappedValue.dismiss()
+            }, label: {
+                Text("Cancel")
+            }),trailing: Button(action: {
                 presentationMode.wrappedValue.dismiss()
             }, label: {
                 Text("Apply")
