@@ -3,7 +3,7 @@
 
 ## Requirement'
 - Xcode 12
--Execute on iOS 14.0 or later \
+- Execute on iOS 14.0 or later 
 
 ## Supports
 - Dark Mode
