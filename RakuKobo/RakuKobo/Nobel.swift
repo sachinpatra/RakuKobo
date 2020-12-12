@@ -7,7 +7,15 @@
 
 import SwiftUI
 
-struct Nobel: Decodable, Identifiable {
+struct Nobel: Decodable, Identifiable, Hashable {
+    static func == (lhs: Nobel, rhs: Nobel) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
     var id: Int
     var category: String
     var died: String
