@@ -27,27 +27,25 @@ struct FilterView: View {
                     Text("Select location")
                         .foregroundColor(.blue)
                 }
-                if let lat = viewModel.lat, let lng = viewModel.lng {
+                if let coordi = viewModel.coordi {
                     HStack {
                         Text("Latitude")
                         Spacer()
-                        Text("\(lat)")
+                        Text("\(coordi.latitude)")
                     }
                     HStack {
                         Text("Longitude")
                         Spacer()
-                        Text("\(lng)")
+                        Text("\(coordi.longitude)")
                     }
                 }
             }
             .listStyle(GroupedListStyle())
             .navigationBarTitle("Find Nobel Laureates", displayMode: .inline)
             .onChange(of: selectedLocation) { (value) in
-                viewModel.lat = value?.coordinate.latitude
-                viewModel.lng = value?.coordinate.longitude
+                viewModel.coordi = value?.coordinate
                 
-                print((value?.coordinate.latitude))
-                print(value?.coordinate.longitude)
+                print((value?.coordinate))
                 print( value!.coordinate.latitude.cutOffDecimalsAfter(1))
                 print( value!.coordinate.longitude.cutOffDecimalsAfter(1))
             }
@@ -60,8 +58,7 @@ struct FilterView: View {
             }, label: {
                 Text("Apply")
             }).disabled(viewModel.selectedYear.isEmpty
-                            && viewModel.lat == nil
-                            && viewModel.lng == nil)
+                            && viewModel.coordi == nil)
             )
         }
     }

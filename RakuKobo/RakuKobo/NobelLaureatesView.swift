@@ -84,8 +84,7 @@ struct NobelLaureatesView: View {
             .navigationBarTitle("Nobel Laureates")
             .navigationBarItems(leading: Button(action: {
                 viewModel.selectedYear = ""
-                viewModel.lat = nil
-                viewModel.lng = nil
+                viewModel.coordi = nil
             }, label: {
                 Text("Clear Filter")
             }), trailing: Button(action: {

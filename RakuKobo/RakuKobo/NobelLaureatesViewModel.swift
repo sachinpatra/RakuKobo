@@ -14,8 +14,6 @@ class NobelLaureatesViewModel: ObservableObject {
     @Published private (set) var filteredList = [Nobel]()
     @Published var selectedYear: String = ""
     @Published var coordi: CLLocationCoordinate2D?
-    @Published var lat: Double?
-    @Published var lng: Double?
     
     private var disposeBag = Set<AnyCancellable>()
 
@@ -25,16 +23,16 @@ class NobelLaureatesViewModel: ObservableObject {
         self.nobels = try! JSONDecoder().decode([Nobel].self, from: data)
         self.filteredList = self.nobels
         
-        Publishers.CombineLatest3($selectedYear, $lat, $lng)
+        Publishers.CombineLatest($selectedYear, $coordi)
             .subscribe(on: DispatchQueue.global())
-            .map{(year, latti, langi) -> [Nobel] in
-                guard !year.isEmpty, let lattitude = latti, let longitude = langi else {
+            .map{(year, coordinate) -> [Nobel] in
+                guard !year.isEmpty, let cordi = coordinate else {
                     return self.nobels
                 }
                 let result = self.nobels.filter{
                     $0.year == year
-                        && Double.equal($0.location.lat, lattitude, precise: 1)
-                        && Double.equal($0.location.lng, longitude, precise: 1)
+                        && Double.equal($0.location.lat, cordi.latitude, precise: 1)
+                        && Double.equal($0.location.lng, cordi.longitude, precise: 1)
                 }
                 return result
             }
