@@ -7,3 +7,4 @@
 
 ## Supports
 - Dark Mode
+- Landscape Mode
